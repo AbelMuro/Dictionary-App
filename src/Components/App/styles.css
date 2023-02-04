@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Inconsolata";
+    src: url(./../FontFiles/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: "Inter-variable-font";
+    src: url(./../FontFiles/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Lora-Italic";
+    src: url(./../FontFiles/Lora-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Lora-Variable";
+    src: url(./../FontFiles/Lora-VariableFont_wght.ttf);
+}
+
+.app{
+    width: 800px;
+    margin: auto;
+}
