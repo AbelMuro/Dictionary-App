@@ -4,7 +4,7 @@ import './styles.css';
 
 function Header({word}) {
 
-
+    //i will need to iterate through the phonetics array and find the first audio property that doesnt have an empty string
     const handleAudio = async () => {
         const audioFiles =  word.phonetics[0].audio;
         const audio = new Audio(audioFiles);

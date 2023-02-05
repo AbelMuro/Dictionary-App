@@ -14,7 +14,7 @@ function Content() {
                 return response.json();
             })
             .then((results) => {
-                console.log(results[0])
+              console.log(results[0])
               setWord(results[0]);
             })            
     }, [state])
