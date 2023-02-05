@@ -1,0 +1,37 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 114px;
+    margin: 30px 0 0 0;
+    width: 100%;
+}
+
+.title_phonetic{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: 100%;
+}
+
+.title{
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.phonetic{
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #A445ED;
+    line-height: 29px;
+}
+
+
+.playIcon{
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    align-self: center;
+}

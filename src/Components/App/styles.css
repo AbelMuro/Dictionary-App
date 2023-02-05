@@ -18,6 +18,12 @@
 }
 
 .app{
-    width: 800px;
+    width: 737px;
     margin: auto;
+}
+
+
+:root{
+    --close: 50;
+    --far: 10;
 }
