@@ -25,6 +25,20 @@ function Header({word}) {
         }
     }
 
+    const handleMouseEnter = () => {
+        const iconBackground = document.querySelector("#iconBackground");
+        const iconArrow = document.querySelector("#iconArrow");
+        iconBackground.style.opacity = "1";
+        iconArrow.style.fill = "white";
+    }
+
+    const handleMouseLeave = () => {
+        const iconBackground = document.querySelector("#iconBackground");
+        const iconArrow = document.querySelector("#iconArrow");
+        iconBackground.style.opacity = "";
+        iconArrow.style.fill = "";
+    }
+
     useEffect(() => {
         const allPhonetics = word.phonetics;
         let phoneticString = "";
@@ -35,7 +49,6 @@ function Header({word}) {
                 break;
             }
         }
-
         setPhonetic(phoneticString);
     }, [word])
 
@@ -49,8 +62,12 @@ function Header({word}) {
                     {phonetic}
                 </h3>                
             </div>
-            <img src={playIcon} className="playIcon" onClick={handleAudio}/>                {/* need to work on the css:hover for this element*/}
-
+            <svg id="svg_flex_item" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" onClick={handleAudio}>
+                <g fillRule="evenodd" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <circle id="iconBackground" cx="37.5" cy="37.5" r="37.5"/>
+                    <path id="iconArrow" d="M29 27v21l21-10.5z"/>
+                </g>
+            </svg>             
         </section>
     )
 }

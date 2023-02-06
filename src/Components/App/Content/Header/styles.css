@@ -28,10 +28,24 @@
     line-height: 29px;
 }
 
-
-.playIcon{
-    cursor: pointer;
-    width: 75px;
-    height: 75px;
+#svg_flex_item{
     align-self: center;
+}
+
+#iconBackground{
+    fill: #A445ED;
+    opacity: 0.25;
+}
+
+#iconArrow{
+    fill: #A445ED;
+}
+
+#iconBackground, #iconArrow{
+    cursor: pointer;
+}
+
+#iconBackground:hover{
+    fill-rule: nonzero;
+
 }

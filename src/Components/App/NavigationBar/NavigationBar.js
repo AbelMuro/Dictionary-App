@@ -14,9 +14,7 @@ function NavigationBar() {
             <section className="options">
                 <FontOptions/>
                 <div className="divisor"></div>
-                <LightSwitch/>
-                <img src={icons["moon"]} className="moon"/>  
-    
+                <LightSwitch/>   
             </section>
         </nav>
     )
