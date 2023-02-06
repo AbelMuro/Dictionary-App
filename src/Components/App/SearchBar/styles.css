@@ -2,7 +2,7 @@
     z-index: var(--far);
     width: 736px;
     height: 64px;
-    margin: 40px auto 0px auto;
+    margin: 40px auto 45px auto;
     position: relative;
 }
 .searchBox{

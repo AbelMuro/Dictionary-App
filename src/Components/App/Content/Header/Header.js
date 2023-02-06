@@ -1,22 +1,43 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import playIcon from './Icons/icon-play.svg';
 import './styles.css';
 
 function Header({word}) {
+    const [phonetic, setPhonetic] = useState();
 
-    //i will need to iterate through the phonetics array and find the first audio property that doesnt have an empty string
     const handleAudio = async () => {
-        const audioFiles =  word.phonetics[0].audio;
-        const audio = new Audio(audioFiles);
-        audio.type = "audio/wav";
+        const allAudioFiles = word.phonetics;     //not every element in the phonetics arrays has an audio file,
+        let audioFile = "";                     //so i will iterate to find the first element with the file
+        for(let file in allAudioFiles){
+            if(allAudioFiles[file].audio){   
+                audioFile = allAudioFiles[file].audio;
+                break;
+            }   
+        }
+        const audio = new Audio(audioFile);
+        audio.type = audioFile.includes("mp3") ? "audio/mp3" : "audio/wav";
 
         try{
             await audio.play();
         }
         catch(err){
-            console.log("failed to play")
+            console.log("failed to play");
         }
     }
+
+    useEffect(() => {
+        const allPhonetics = word.phonetics;
+        let phoneticString = "";
+
+        for(let phonetic in allPhonetics){
+            if(allPhonetics[phonetic].text){
+                phoneticString = allPhonetics[phonetic].text;
+                break;
+            }
+        }
+
+        setPhonetic(phoneticString);
+    }, [word])
 
     return(
         <section className="header">
@@ -25,7 +46,7 @@ function Header({word}) {
                     {word.word}
                 </h1>
                 <h3 className="phonetic">
-                    {word.phonetic}
+                    {phonetic}
                 </h3>                
             </div>
             <img src={playIcon} className="playIcon" onClick={handleAudio}/>

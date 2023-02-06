@@ -27,3 +27,15 @@
     --close: 50;
     --far: 10;
 }
+
+ul li{
+    margin-bottom: 13px;
+    line-height: 24px;
+    font-size: 18px;
+    color: #2D2D2D;
+    font-weight: 400;
+}
+
+li::marker{
+    color: #8F19E8;
+}

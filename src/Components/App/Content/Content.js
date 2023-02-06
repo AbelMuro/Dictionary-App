@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import Header from './Header';
+import PartsOfSpeech from './PartsOfSpeech';
+import Source from './Source';
 import './styles.css';
 
 function Content() {
@@ -22,6 +24,10 @@ function Content() {
     return word ? (
         <article className="content">
             <Header word={word}/>
+            <PartsOfSpeech word={word} partOfSpeech="noun"/>
+            <PartsOfSpeech word={word} partOfSpeech="verb"/>
+            <PartsOfSpeech word={word} partOfSpeech="adjective"/>
+            <Source word={word} />
         </article>
     ) : (<></>)
 }

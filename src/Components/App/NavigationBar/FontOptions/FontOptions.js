@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 import arrow from './Icons/icon-arrow-down.svg';
 import "./styles.css";
 
@@ -32,18 +32,35 @@ function FontOptions() {
         handlePopup();
     }
 
+    useEffect(() => {
+        const closePopup = (e) => {
+            const popup = document.querySelector(".popup");
+            if(e.target && !e.target.matches(".popup") && !e.target.matches(".fontOptionsButton")){
+                popup.style.display = "";
+                setOpenPopup(false);
+            }
+        }
+
+        const body = document.querySelector("html");
+        body.addEventListener("click", closePopup);
+
+        return () => {
+            body.removeEventListener("click", closePopup)
+        }
+
+    }, [])
 
 
     return(
         <>
-            <div className="fontOptions" onClick={handlePopup}>
+            <button className="fontOptionsButton" onClick={handlePopup}>
                 <p className="fontChoosen">
                     {option}
                 </p>
                 <img src={arrow} className="arrowDown"/>                 
-            </div>        
+            </button>        
             <div className="popup">
-                <div className="content">
+                <div className="popup_content">
                     <p onClick={handleFontChoice} id="choosen" data-option="Sans Serif" data-font="Inter-variable-font" >Sans Serif</p>
                     <p onClick={handleFontChoice} data-option="Serif" data-font="Lora-Variable">Serif</p>
                     <p onClick={handleFontChoice} data-option="Mono" data-font="Inconsolata">Mono</p>                        
