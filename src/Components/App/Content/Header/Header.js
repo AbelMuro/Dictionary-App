@@ -49,7 +49,7 @@ function Header({word}) {
                     {phonetic}
                 </h3>                
             </div>
-            <img src={playIcon} className="playIcon" onClick={handleAudio}/>
+            <img src={playIcon} className="playIcon" onClick={handleAudio}/>                {/* need to work on the css:hover for this element*/}
 
         </section>
     )
