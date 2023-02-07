@@ -1,18 +1,15 @@
-const darkTheme = [
-    "--bg-color: var(--color-blue)",
-    "--text-color-primary: var(--color-white)",
-    "--text-color-secondary: var(--color-iron)",
-    "--text-color-tertiary: var(--color-white)",
-    "--fill-switch: var(--color-gold)",
-    "--fill-primary:var(--color-white)"
-];
-  
+import './themes.css';
+
 
 function ChangeTheme({turnSwitch}) {
-    const body = document.getElementsByTagName("body")[0];
-    //const useDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    //console.log(useDark)
-    body
+
+    let theme;
+    if(turnSwitch)
+        theme = "dark"
+    else
+        theme = "light"
+
+    document.documentElement.setAttribute("data-theme", theme);
 }
 
 export default ChangeTheme;

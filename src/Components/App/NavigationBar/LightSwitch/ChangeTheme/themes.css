@@ -1,0 +1,15 @@
+
+/* this will ONLY detect if the user's system has a theme set to dark or light*/
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: black;
+    }
+}
+
+
+
+@media (prefers-color-scheme: light){
+    body{
+        background-color: white;
+    }
+}
