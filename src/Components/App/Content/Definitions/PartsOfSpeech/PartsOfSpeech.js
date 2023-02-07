@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import "./styles.css";
 
-
 function PartsOfSpeech({word , partOfSpeech}) {
     const [meanings, setMeanings] = useState([]);
     const [synonym, setSynonym] = useState("");
@@ -20,8 +19,8 @@ function PartsOfSpeech({word , partOfSpeech}) {
 
     return meanings.length ? (
         <section className="container">
-            <div className="speech_header">
-                <h2 className="speech_title">
+            <div className="heading_medium">
+                <h2 className="heading_title">
                     {partOfSpeech}
                 </h2>
                 <div className="greyLine"></div>

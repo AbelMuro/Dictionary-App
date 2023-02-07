@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import Header from './Header';
-import PartsOfSpeech from './PartsOfSpeech';
-import Source from './Source';
-import './styles.css';
+import Definitions from './Definitions';
+import Message from './Message';
 
 function Content() {
     const state = useSelector(state => state.word);
@@ -16,19 +14,18 @@ function Content() {
                 return response.json();
             })
             .then((results) => {
-              console.log(results[0])
-              setWord(results[0]);
+                if(results?.message)
+                    setWord(results)
+                else
+                    setWord(results[0]);
+            })
+            .catch((err) => {
+                console.error(err);
             })            
     }, [state])
 
-    return word ? (
-        <article className="content">
-            <Header word={word}/>
-            <PartsOfSpeech word={word} partOfSpeech="noun"/>
-            <PartsOfSpeech word={word} partOfSpeech="verb"/>
-            <PartsOfSpeech word={word} partOfSpeech="adjective"/>
-            <Source word={word} />
-        </article>
+    return word ? ( !word?.message ?
+        <Definitions word={word}/> : <Message word={word}/>
     ) : (<></>)
 }
 

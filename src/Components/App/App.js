@@ -5,6 +5,8 @@ import Content from './Content';
 import Store from './Store';
 import {Provider} from 'react-redux';
 import "./styles.css";
+import "./light.css";
+import "./dark.css";
 
 function App() {
     return(

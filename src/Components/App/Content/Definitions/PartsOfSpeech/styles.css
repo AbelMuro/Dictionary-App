@@ -2,18 +2,19 @@
     margin-bottom: 40px;
 }
 
-.speech_header{
+.heading_medium{
     display: flex;
     gap: 20px;
     margin-bottom: 40px;
 }
 
-.speech_title{
+.heading_title{
     font-size: 24px;
-    font-weight: 700;
-    font-style: italic;
     color: #2D2D2D;
     margin: 0px;
+    font-family: "Inter-bold";
+    font-weight: 700;
+    font-style: italic;
 }
 
 .MeaningTitle{
@@ -56,4 +57,9 @@
     font-weight: bold;
     align-self: center;
     color: #A445ED;
+    line-height: 24px;
+}
+
+.synonymsLink:hover{
+    text-decoration-line: underline;
 }

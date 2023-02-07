@@ -1,4 +1,5 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
+import ChangeTheme from './ChangeTheme';
 import './styles.css';
 
 function LightSwitch(){
@@ -36,8 +37,13 @@ function LightSwitch(){
         moon.current.style.stroke = "";
     }
 
+    useEffect(() => {
+        ChangeTheme(turnSwitch);
+    }, [turnSwitch])
+
     return(
         <>
+           
             <div className="lightSwitch" onClick={handleSwitch}>
                 <div className="head"></div>
             </div>  
