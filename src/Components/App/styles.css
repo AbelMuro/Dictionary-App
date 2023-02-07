@@ -17,7 +17,16 @@
     src: url(./../FontFiles/Lora-VariableFont_wght.ttf);
 }
 
+:root{
+    --color-black: black;
+    --color-white: white;
+    --close: 50;
+    --far: 10;
+}
+
+
 body{
+    background-color: var(--bg-color);
     font-family: "Inter";
     min-height: 100vh;
     margin: 0px;
@@ -26,11 +35,6 @@ body{
 .app{
     width: 737px;
     margin: auto;
-}
-
-:root{
-    --close: 50;
-    --far: 10;
 }
 
 ul li{

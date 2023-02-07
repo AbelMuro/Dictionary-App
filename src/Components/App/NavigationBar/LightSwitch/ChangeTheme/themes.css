@@ -2,14 +2,40 @@
 /* this will ONLY detect if the user's system has a theme set to dark or light*/
 @media (prefers-color-scheme: dark){
     body{
-        background-color: black;
+        background-color: black !important;
     }
-}
 
+    .title{
+        color: white;
+    }
 
+    li{
+        color: white !important;
+    }
 
-@media (prefers-color-scheme: light){
-    body{
-        background-color: white;
+    .heading_title{
+        color: white !important;
+    }
+
+    .source_Link{
+        color: white !important;
+    }
+
+    .popup{
+        background-color: black;
+        box-shadow: 0px 5px 30px #A445ED !important;
+    }
+
+    .popup_content{
+        color: white;
+    }
+
+    .searchBox{
+        background-color: #1F1F1F !important; 
+        color: white;
+    }
+
+    .fontChoosen{
+        color: white;
     }
 }

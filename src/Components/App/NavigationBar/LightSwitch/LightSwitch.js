@@ -41,10 +41,10 @@ function LightSwitch(){
         ChangeTheme(turnSwitch);
     }, [turnSwitch])
 
-    useEffect(() => {
-        const useDark = window.matchMedia("(prefers-color-scheme: dark)");  
-        handleSwitch();
-    }, [])
+    //useEffect(() => {
+        //const useDark = window.matchMedia("(prefers-color-scheme: dark)");  
+        //handleSwitch();
+    //}, [])
 
     return(
         <>
