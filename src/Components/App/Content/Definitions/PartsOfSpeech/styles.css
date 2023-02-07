@@ -10,7 +10,7 @@
 
 .heading_title{
     font-size: 24px;
-    color: #2D2D2D;
+    color: var(--text-color);
     margin: 0px;
     font-family: "Inter-bold";
     font-weight: 700;

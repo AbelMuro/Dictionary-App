@@ -6,9 +6,9 @@
 }
 
 .source_Link{
+    color: var(--text-color);
     align-self: center;
     font-size: 14px;
-    color: #2D2D2D;
 }
 
 .source_Title{
