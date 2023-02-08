@@ -1,0 +1,6 @@
+.app{
+    transition: width 0.1s linear;
+    width: 737px;
+    margin: auto;
+    margin-top: 58px;
+}

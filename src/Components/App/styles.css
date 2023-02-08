@@ -39,13 +39,6 @@ body{
     margin: 0px;
 }
 
-.app{
-    transition: width 0.1s linear;
-    width: 737px;
-    margin: auto;
-    margin-top: 58px;
-}
-
 ul li{
     font-family: var(--font-choosen);
     margin-bottom: 13px;

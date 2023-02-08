@@ -1,11 +1,13 @@
 import React, {useState, useEffect, useRef, memo} from 'react';
 import {useDispatch} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 import MakeAsyncCall from './MakeAsyncCall';
 import searchIcon from './Icons/icon-search.svg';
 import './styles.css';
 
 function SearchBar() {
     const [word, setWord] = useState("");
+    const navigate = useNavigate();
     const invalidMessage = useRef();
     const searchBar = useRef();
     const dispatch = useDispatch();
@@ -20,8 +22,11 @@ function SearchBar() {
         const keyboard = (e) => {
             const keyPressed = e.key;
             if(keyPressed != "Enter") return;
-            if(word)
-                dispatch(MakeAsyncCall(word))
+            if(word){
+                navigate("/definition");
+                dispatch(MakeAsyncCall(word))           //using Thunk middleware for api calls
+            }
+                
             else{
                 searchBar.current.setCustomValidity("error");
                 invalidMessage.current.style.display = "block";  
