@@ -25,9 +25,9 @@ function Content() {
             })            
     }, [state])
 
-    return false ? ( !word?.message ?
-        <Definitions word={word}/> : <Message word={word}/>
-    ) : (<LoadingScreen/>)
+    return word ? ( word?.message ?
+        <Message word={word}/> : <Definitions word={word}/>
+    ) : state == "" ? <></> : (<LoadingScreen/>)
 }
 
 export default Content;

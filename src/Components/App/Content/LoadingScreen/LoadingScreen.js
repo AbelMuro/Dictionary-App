@@ -65,8 +65,7 @@ const TextLine = styled(Skeleton)`
 
 
 function LoadingScreen() {
-    const mobile = useMediaQuery("(max-width: 800px)")
-
+    const mobile = useMediaQuery("(max-width: 800px)");
 
     const DisplayLoading = () => {
         let allLoading = [];
@@ -102,9 +101,7 @@ function LoadingScreen() {
             </Box>
             )
         }
-
         return allLoading;
-
     }
 
     return(

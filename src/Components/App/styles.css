@@ -2,7 +2,6 @@
     font-family: "Inter-bold";
     src: url(./../FontFiles/Inter-Bold.ttf)
 }
-
 @font-face {
     font-family: "Inconsolata";
     src: url(./../FontFiles/Inconsolata-VariableFont_wdth\,wght.ttf);
@@ -11,7 +10,6 @@
     font-family: "Inter";
     src: url(./../FontFiles/Inter-VariableFont_slnt\,wght.ttf);
 }
-
 @font-face {
     font-family: "Lora";
     src: url(./../FontFiles/Lora-VariableFont_wght.ttf);
