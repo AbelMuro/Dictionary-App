@@ -12,16 +12,19 @@
     font-size: 24px;
     color: var(--text-color);
     margin: 0px;
-    font-family: "Inter-bold";
+    font-family: var(--font-choosen-variant);
     font-weight: 700;
     font-style: italic;
+    transition: font-size 0.2s linear;
 }
 
 .MeaningTitle{
+    font-family: var(--font-choosen);
     font-size: 20px;
     font-weight: 400;
     color: #757575;
     margin: 0px 0px 25px 0px;
+    transition: font-size 0.2s linear;
 }
 
 .greyLine{
@@ -36,6 +39,7 @@
     font-weight: 400;
     margin-top: 13px;
     display: block;
+    transition: font-size 0.2s linear;
 }
 
 .synonyms{
@@ -46,20 +50,41 @@
 }   
 
 .synonymsTitle{
+    font-family: var(--font-choosen);
     margin: 0px;
     color: #757575;
     font-size: 20px;
+    transition: font-size 0.2s linear;
 }
 
 .synonymsLink{
+    font-family: var(--font-choosen);
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
     align-self: center;
     color: #A445ED;
     line-height: 24px;
+    transition: font-size 0.2s linear;
 }
 
 .synonymsLink:hover{
     text-decoration-line: underline;
+}
+
+@media(max-width: 535px){
+    .heading_title{
+        font-size: 18px;
+    }
+
+    .MeaningTitle{
+        font-size: 16px;
+    }
+
+    .synonymsTitle, .synonymsLink{
+        font-size: 16px;
+    }
+    .quote{
+        font-size: 15px;
+    }
 }

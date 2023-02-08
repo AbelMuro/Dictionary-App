@@ -4,6 +4,7 @@
     height: 114px;
     width: 100%;
     margin-bottom: 40px;
+    transition: height 0.2s linear;
 }
 
 .title_phonetic{
@@ -15,13 +16,16 @@
 }
 
 .title{
+    font-family: var(--font-choosen);
     color: var(--text-color);
     font-size: 64px;
     font-weight: 700;
     margin: 0px;
+    transition: font-size 0.2s linear;
 }
 
 .phonetic{
+    font-family: var(--font-choosen);
     margin: 0px;
     font-size: 24px;
     font-weight: 400;
@@ -31,6 +35,9 @@
 
 #svg_flex_item{
     align-self: center;
+    width: 75px;
+    height: 75px;
+    transition: width 0.2s linear, height 0.2s linear;
 }
 
 #iconBackground{
@@ -48,5 +55,23 @@
 
 #iconBackground:hover{
     fill-rule: nonzero;
+}
 
+@media(max-width: 535px){
+    .title{
+        font-size: 32px;
+    }
+
+    #svg_flex_item{
+        width: 48px;
+        height: 48px;
+    }
+
+    .header{
+        height: 76px;
+    }
+    .phonetic{
+        font-size: 18px;
+        gap: 8px;
+    }
 }

@@ -4,11 +4,13 @@
 const lightTheme = [
     "--bg-color: white",
     "--text-color: var(--color-black)",
+    "--box-shadow: var(--box-shadow-light)"
   ];
   
 const darkTheme = [
     "--bg-color: black",
-    "--text-color: var(--color-white)"
+    "--text-color: var(--color-white)",
+    "--box-shadow: var(--box-shadow-dark)"
 ];
 
 function ChangeTheme(turnSwitch) {
@@ -20,7 +22,7 @@ function ChangeTheme(turnSwitch) {
     else
         theme = lightTheme;
 
-    root.style.cssText = theme.join(";");
+    root.style.cssText += theme.join(";");
         
 }
 

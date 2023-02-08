@@ -20,32 +20,53 @@
 :root{
     --color-black: #2D2D2D;
     --color-white: white;
-    
+    --box-shadow-dark: #A445ED; 
+    --box-shadow-light: rgba(0, 0, 0, 0.1);
+    --font-inter: "Inter";
+    --font-lora: "Lora";
+    --font-Inconsolata: "Inconsolata";
     --close: 50;
     --far: 10;
 }
 
 
 body{
+    transition: background-color 0.2s linear;
     background-color: var(--bg-color);
-    font-family: "Inter";
     min-height: 100vh;
     margin: 0px;
 }
 
 .app{
+    transition: width 0.1s linear;
     width: 737px;
     margin: auto;
+    margin-top: 58px;
 }
 
 ul li{
+    font-family: var(--font-choosen);
     margin-bottom: 13px;
     line-height: 24px;
     font-size: 18px;
     color: var(--text-color);
     font-weight: 400;
+    transition: font-size 0.2s linear;
 }
 
 li::marker{
     color: #8F19E8;
+}
+
+@media(max-width: 800px){
+    .app{
+        width: 90%;
+    }
+}
+
+
+@media(max-width: 535px){
+    ul li{
+        font-size: 15px;
+    }
 }

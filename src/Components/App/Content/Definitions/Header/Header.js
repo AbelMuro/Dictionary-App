@@ -62,7 +62,7 @@ function Header({word}) {
                     {phonetic}
                 </h3>                
             </div>
-            <svg id="svg_flex_item" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" onClick={handleAudio}>
+            <svg id="svg_flex_item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" onClick={handleAudio}>
                 <g fillRule="evenodd" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <circle id="iconBackground" cx="37.5" cy="37.5" r="37.5"/>
                     <path id="iconArrow" d="M29 27v21l21-10.5z"/>

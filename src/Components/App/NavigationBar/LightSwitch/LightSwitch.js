@@ -27,7 +27,6 @@ function LightSwitch(){
         })
     }
 
-
     const handleMouseEnter = () => {
         moon.current.style.stroke = "#A445ED";
     }
@@ -40,11 +39,6 @@ function LightSwitch(){
     useEffect(() => {
         ChangeTheme(turnSwitch);
     }, [turnSwitch])
-
-    //useEffect(() => {
-        //const useDark = window.matchMedia("(prefers-color-scheme: dark)");  
-        //handleSwitch();
-    //}, [])
 
     return(
         <>

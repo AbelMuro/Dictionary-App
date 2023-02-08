@@ -1,8 +1,7 @@
 .navBar{
-    width: 736.99px;
+    width: 100%;
     height: 36.5px;
     margin: auto;
-    margin-top: 58px;
 }
 
 .navBar, .options{
@@ -21,7 +20,6 @@
     width: 1px;
     height: 30px;
 }
-
 
 .moon{
     width: 20px;

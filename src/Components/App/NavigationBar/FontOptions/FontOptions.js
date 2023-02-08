@@ -2,6 +2,7 @@ import React, {useState , useEffect} from 'react';
 import arrow from './Icons/icon-arrow-down.svg';
 import "./styles.css";
 
+
 function FontOptions() {
     const [option, setOption] = useState("Sans Serif");
     const [font, setFont] = useState("Inter");
@@ -32,9 +33,9 @@ function FontOptions() {
         handlePopup();
     }
 
+    useEffect(() => {
     //this useEffect will add a click event listener to the body tag, if the user clicks on any 
     //element of the body tag AND the popup element is open, then it will close the popup automatically
-    useEffect(() => {
         const closePopup = (e) => {
             const popup = document.querySelector(".popup");
             if(e.target && !e.target.matches(".popup") && !e.target.matches(".fontOptionsButton")){
@@ -51,34 +52,15 @@ function FontOptions() {
     }, [])
 
     useEffect(() => {
-        const body = document.querySelector("body");
-        body.style.fontFamily = font;
-
-        //the .heading_title element uses a different font file, according to the design 
-        const speechHeaders = document.querySelectorAll(".heading_title");
+        const root = document.getElementsByTagName("html")[0];
+        let newVariables;
         if(font == "Inter")
-            speechHeaders.forEach((header) => {
-                header.style.fontFamily = "";
-                header.style.fontWeight = "";
-                header.style.fontStyle = ""
-            })
-        else if(font == "Lora")
-            speechHeaders.forEach((header) => {
-                header.style.fontFamily = font;
-                header.style.fontWeight = "400";
-                header.style.fontStyle = "normal";
-            })
-        else{
-            speechHeaders.forEach((header) => {
-                header.style.fontFamily = font;
-                header.style.fontWeight = "";
-                header.style.fontStyle = "normal";
-            })
-        }
+            newVariables = `--font-choosen: ${font}; --font-choosen-variant: Inter-bold`;
+        else 
+            newVariables = `--font-choosen: ${font}; --font-choosen-variant: ${font}`;
 
-        return () => {
-            body.style.fontFamily = font;
-        }
+        root.style.cssText += newVariables
+
     },[font])
 
 
