@@ -4,13 +4,15 @@
 const lightTheme = [
     "--bg-color: white",
     "--text-color: var(--color-black)",
-    "--box-shadow: var(--box-shadow-light)"
+    "--box-shadow: var(--box-shadow-light)",
+    "--divider-line: var(--light-line)"
   ];
   
 const darkTheme = [
     "--bg-color: black",
     "--text-color: var(--color-white)",
-    "--box-shadow: var(--box-shadow-dark)"
+    "--box-shadow: var(--box-shadow-dark)",
+    "--divider-line: var(--dark-line)"
 ];
 
 function ChangeTheme(turnSwitch) {

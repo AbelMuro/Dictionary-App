@@ -22,9 +22,9 @@
 }
 
 .line{
+    background-color: var(--divider-line);
     height: 1px;
     width: 100%;
-    background-color: #E9E9E9;
 }
 
 .windowIcon{

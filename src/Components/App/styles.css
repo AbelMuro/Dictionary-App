@@ -25,6 +25,8 @@
     --font-inter: "Inter";
     --font-lora: "Lora";
     --font-Inconsolata: "Inconsolata";
+    --light-line: #E9E9E9;
+    --dark-line: #3A3A3A;
     --close: 50;
     --far: 10;
 }
