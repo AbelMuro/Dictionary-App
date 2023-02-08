@@ -27,6 +27,8 @@
     --font-Inconsolata: "Inconsolata";
     --light-line: #E9E9E9;
     --dark-line: #3A3A3A;
+    --loading-light: rgb(202, 202, 202);
+    --loading-dark: rgb(70, 29, 71);
     --close: 50;
     --far: 10;
 }

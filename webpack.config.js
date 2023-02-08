@@ -1,6 +1,5 @@
 const path = require('path');               
 const HtmlWebpackPlugin = require("html-webpack-plugin"); 
-const dotenv = require("dotenv-webpack");
 
 module.exports = {
     entry: './src/index.js',                                 
@@ -13,8 +12,7 @@ module.exports = {
             filename: 'index.html',   
             favicon: './src/Components/Favicon/favicon-32x32.png',          
             template: './src/index.html'      
-        }),
-        new dotenv                         
+        })                      
     ],
     devServer: {                             
         port: 3000,                           

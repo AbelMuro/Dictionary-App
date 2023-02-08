@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import LoadingScreen from './LoadingScreen';
 import Definitions from './Definitions';
 import Message from './Message';
 
@@ -24,9 +25,9 @@ function Content() {
             })            
     }, [state])
 
-    return word ? ( !word?.message ?
+    return false ? ( !word?.message ?
         <Definitions word={word}/> : <Message word={word}/>
-    ) : (<></>)
+    ) : (<LoadingScreen/>)
 }
 
 export default Content;
