@@ -1,5 +1,6 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, memo} from 'react';
 import {useDispatch} from 'react-redux';
+import MakeAsyncCall from './MakeAsyncCall';
 import searchIcon from './Icons/icon-search.svg';
 import './styles.css';
 
@@ -19,15 +20,13 @@ function SearchBar() {
         const keyboard = (e) => {
             const keyPressed = e.key;
             if(keyPressed != "Enter") return;
-        
             if(word)
-                dispatch({type: "set", word: word})
+                dispatch(MakeAsyncCall(word))
             else{
                 searchBar.current.setCustomValidity("error");
                 invalidMessage.current.style.display = "block";  
             }          
         }
-
         document.addEventListener("keydown", keyboard);
 
         return () => {
@@ -45,4 +44,4 @@ function SearchBar() {
     )
 }
 
-export default SearchBar;
+export default memo(SearchBar);

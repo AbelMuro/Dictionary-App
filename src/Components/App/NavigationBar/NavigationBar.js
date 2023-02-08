@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import FontOptions from './FontOptions';
 import LightSwitch from './LightSwitch';
 import icons from './Icons';
@@ -20,4 +20,4 @@ function NavigationBar() {
     )
 }
 
-export default NavigationBar;
+export default memo(NavigationBar);

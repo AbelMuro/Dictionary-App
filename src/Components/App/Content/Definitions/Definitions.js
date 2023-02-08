@@ -5,12 +5,19 @@ import Source from './Source';
 import './styles.css';
 
 function Definitions({word}) {
+
+    console.log(word);
+
+    const availablePartsOfSpeeches = word.meanings.map((meaning) => {      //checking the word to see if it has a noun, verb or adjective
+        return meaning.partOfSpeech;
+    });
+    
     return(
         <article className="content">
-            <Header word={word}/>
-            <PartsOfSpeech word={word} partOfSpeech="noun"/>
-            <PartsOfSpeech word={word} partOfSpeech="verb"/>
-            <PartsOfSpeech word={word} partOfSpeech="adjective"/>
+            <Header word={word} />
+            {availablePartsOfSpeeches.includes("noun")  ? <PartsOfSpeech word={word} partOfSpeech="noun"/> : <></>}
+            {availablePartsOfSpeeches.includes("verb")  ? <PartsOfSpeech word={word} partOfSpeech="verb"/> : <></>}
+            {availablePartsOfSpeeches.includes("adjective")  ? <PartsOfSpeech word={word} partOfSpeech="adjective"/>: <></>}
             <Source word={word} />
         </article>
     )

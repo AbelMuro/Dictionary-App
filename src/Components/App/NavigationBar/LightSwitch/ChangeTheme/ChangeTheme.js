@@ -1,4 +1,3 @@
-
 const lightTheme = [
     "--bg-color: white",
     "--text-color: var(--color-black)",
