@@ -1,7 +1,7 @@
-export function WordReducer(state = {word: ""}, action){
+export function WordReducer(state = "", action){
     switch(action.type){
        case "set":
-            return {word: action.word};
+            return action.word;
        case "get":
             return state;
        default: 
@@ -9,10 +9,10 @@ export function WordReducer(state = {word: ""}, action){
     }
 }
 
-export function LoadingReducer(state = {isLoading: false}, action){
+export function LoadingReducer(state = false, action){
      switch(action.type){
           case "isLoading":
-               return{isLoading: action.isLoading}
+               return action.isLoading;
           default: 
                return state;  
      }

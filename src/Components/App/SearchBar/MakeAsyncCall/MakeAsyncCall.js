@@ -9,14 +9,15 @@ export default function MakeAsyncCall(word){
             })
             .then((results) => {
                 if(results?.message)
-                    dispatch({type: "set", word: results})                              
+                    dispatch({type: "set", word: results})  
+                                        
                 else
                     dispatch({type: "set", word: results[0]});
                 dispatch({type: "isLoading", isLoading: false})  
             })
             .catch((err) => {
                 dispatch({type: "isLoading", isLoading: false})
-                console.error(err);
+                console.log(err);
             })  
     }
 }

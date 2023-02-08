@@ -6,8 +6,6 @@ import './styles.css';
 
 function Definitions({word}) {
 
-    console.log(word);
-
     const availablePartsOfSpeeches = word.meanings.map((meaning) => {      //checking the word to see if it has a noun, verb or adjective
         return meaning.partOfSpeech;
     });
