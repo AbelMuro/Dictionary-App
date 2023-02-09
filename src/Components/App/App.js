@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import "./styles.css";
 
 function App() {
+
     return(
             <Provider store={Store}>        
                 <Container className="app">
