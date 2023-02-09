@@ -16,8 +16,8 @@ export default function MakeAsyncCall(word){
                 dispatch({type: "isLoading", isLoading: false})  
             })
             .catch((err) => {
-                dispatch({type: "isLoading", isLoading: false})
                 console.log(err);
+                dispatch({type: "isLoading", isLoading: false})
             })  
     }
 }
