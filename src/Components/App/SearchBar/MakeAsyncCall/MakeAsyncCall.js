@@ -16,7 +16,8 @@ export default function MakeAsyncCall(word){
                 dispatch({type: "isLoading", isLoading: false})  
             })
             .catch((err) => {
-                console.log(err);
+                dispatch({type: "set", word: {message: "Something went wrong with the server.", 
+                    resolution: "Please wait for dictionaryAPI.dev to respond at a later time."}});
                 dispatch({type: "isLoading", isLoading: false})
             })  
     }
