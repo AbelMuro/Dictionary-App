@@ -18,6 +18,7 @@
 
 
 .fontChoosen{
+    white-space: nowrap;
     font-family: var(--font-choosen);
     color: var(--text-color);
     text-align: center;
